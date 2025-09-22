@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential heart disease tests that actually matter: coronary calcium score, small dense LDL, insulin levels. Stop wasting money on useless cholesterol panels.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#8B0000">
+    <link rel="canonical" href="https://heartclot.com/testing-guide">
+    
+    <title>Testing Guide: The Only Tests That Actually Predict Heart Attacks | HeartClot</title>
+    
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "headline": "Essential Cardiovascular Tests Your Doctor Isn't Running",
+        "author": {
+            "@type": "Person",
+            "name": "Dr. Pradip Jamnadas",
+            "jobTitle": "Interventional Cardiologist"
+        },
+        "datePublished": "2024-01-01",
+        "dateModified": "2024-01-01"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --blood-red: #8B0000;
+            --deep-red: #DC143C;
+            --light-red: #FFE4E1;
+            --dark: #1a1a1a;
+            --grey: #f8f8f8;
+            --white: #ffffff;
+            --shadow: rgba(0,0,0,0.1);
+            --max-width: 800px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--white);
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--blood-red);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo::before {
+            content: "❤️";
+            font-size: 1.2em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--deep-red);
+        }
+        
+        .nav-links a.active {
+            color: var(--deep-red);
+            border-bottom: 2px solid var(--deep-red);
+            padding-bottom: 2px;
+        }
+        
+        /* Main Layout */
+        .layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 3rem;
+            padding: 100px 2rem 4rem;
+        }
+        
+        /* Table of Contents */
+        .toc {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            background: var(--grey);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .toc h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--blood-red);
+            margin-bottom: 1rem;
+        }
+        
+        .toc ul {
+            list-style: none;
+        }
+        
+        .toc li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .toc a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            display: block;
+            padding: 0.25rem 0;
+        }
+        
+        .toc a:hover {
+            color: var(--deep-red);
+        }
+        
+        /* Content */
+        .content {
+            max-width: var(--max-width);
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--blood-red);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        .test-card {
+            background: linear-gradient(135deg, #FFF 0%, #F5F5F5 100%);
+            border: 2px solid var(--deep-red);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+        
+        .test-card h3 {
+            color: var(--blood-red);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .critical-box {
+            background: #FFEBEE;
+            border-left: 4px solid #E53935;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        
+        .critical-box strong {
+            color: #B71C1C;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .ranges-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .ranges-table th {
+            background: #37474F;
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .ranges-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .optimal {
+            background: #E8F5E9;
+            font-weight: 600;
+            color: #2E7D32;
+        }
+        
+        .warning {
+            background: #FFF3CD;
+            font-weight: 600;
+            color: #856404;
+        }
+        
+        .danger {
+            background: #FFEBEE;
+            font-weight: 600;
+            color: #B71C1C;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--blood-red);
+            margin: 3rem 0 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin: 2rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        ul, ol {
+            margin-bottom: 1.5rem;
+            margin-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .frequency-box {
+            background: #E3F2FD;
+            border: 1px solid #1976D2;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+        }
+        
+        .frequency-box h4 {
+            color: #0D47A1;
+            margin-bottom: 1rem;
+        }
+        
+        .action-box {
+            background: #F3E5F5;
+            border: 2px solid #9C27B0;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+        }
+        
+        .action-box h4 {
+            color: #6A1B9A;
+            margin-bottom: 1rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+            background: #000;
+            border-radius: 10px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .timestamp-note {
+            font-size: 0.875rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Mobile */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .mobile-menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 968px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .toc {
+                display: none;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 5px 20px var(--shadow);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">HeartClot</a>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="/insulin-resistance">Insulin</a></li>
+                <li><a href="/fasting-protocols">Fasting</a></li>
+                <li><a href="/dangerous-foods">Foods</a></li>
+                <li><a href="/gut-heart-axis">Gut</a></li>
+                <li><a href="/vagus-nerve">Vagus</a></li>
+                <li><a href="/exercise-truth">Exercise</a></li>
+                <li><a href="/testing-guide" class="active">Testing</a></li>
+                <li><a href="/supplement-stack">Supplements</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="layout">
+        <aside class="toc">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#waste-of-money">Tests That Don't Matter</a></li>
+                <li><a href="#calcium-score">Coronary Calcium Score</a></li>
+                <li><a href="#advanced-lipids">Advanced Lipid Panel</a></li>
+                <li><a href="#metabolic">Metabolic Markers</a></li>
+                <li><a href="#inflammation">Inflammation Panel</a></li>
+                <li><a href="#action-plan">Your Action Plan</a></li>
+                <li><a href="#frequency">Testing Frequency</a></li>
+                <li><a href="#interpretation">Reading Results</a></li>
+            </ul>
+        </aside>
+        
+        <main class="content">
+            <h1>Tests That Actually Predict Heart Attacks</h1>
+            <p class="subtitle">Your standard cholesterol panel is nearly worthless. Here are the tests that reveal your true cardiovascular risk – and what the numbers really mean</p>
+            
+            <div class="critical-box">
+                <strong>The Most Important Test:</strong>
+                If you're over 30 and get only ONE test, make it a coronary calcium score. This $100 scan tells you more than $1,000 of standard blood work.
+            </div>
+            
+            <section id="waste-of-money">
+                <h2>Stop Wasting Money on These Useless Tests</h2>
+                
+                <p>Standard medical practice runs the wrong tests and misses the real problems. Here's what doesn't predict heart attacks:</p>
+                
+                <h3>Tests That DON'T Predict Heart Disease</h3>
+                <ul>
+                    <li><strong>Total cholesterol:</strong> People with 150 have heart attacks, people with 300 don't</li>
+                    <li><strong>LDL-C (calculated):</strong> Tells you nothing about particle size or oxidation</li>
+                    <li><strong>Basic metabolic panel:</strong> Misses insulin resistance for 10+ years</li>
+                    <li><strong>Standard lipid panel:</strong> Based on 1960s understanding</li>
+                    <li><strong>Fasting glucose alone:</strong> Normal until you're already diabetic</li>
+                </ul>
+                
+                <p class="timestamp-note">Watch: Why standard tests fail [1:46:02-1:47:17]</p>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube-nocookie.com/embed/gryta3KZKU4?start=6362&end=6437" 
+                        title="Standard Tests Don't Work"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+            
+            <section id="calcium-score">
+                <h2>Test #1: Coronary Calcium Score (CAC)</h2>
+                
+                <div class="test-card">
+                    <h3>The Gold Standard Screening Test</h3>
+                    <p><strong>What it measures:</strong> Calcium deposits in your coronary arteries (hardened plaque)</p>
+                    <p><strong>Cost:</strong> $75-150 (often not covered by insurance)</p>
+                    <p><strong>Radiation:</strong> Less than a mammogram</p>
+                    <p><strong>Time:</strong> 10-minute CT scan</p>
+                    
+                    <table class="ranges-table">
+                        <thead>
+                            <tr>
+                                <th>CAC Score</th>
+                                <th>What It Means</th>
+                                <th>Action Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="optimal">
+                                <td>0</td>
+                                <td>No detectable plaque</td>
+                                <td>Retest in 5 years</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>1-99</td>
+                                <td>Mild plaque burden</td>
+                                <td>Aggressive prevention</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>100-399</td>
+                                <td>Moderate plaque</td>
+                                <td>See cardiologist</td>
+                            </tr>
+                            <tr class="danger">
+                                <td>400+</td>
+                                <td>Extensive disease</td>
+                                <td>Immediate intervention</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Key insight:</strong> If you have ANY calcium (score > 0), you already have atherosclerosis. The goal is to stop progression.</p>
+                </div>
+                
+                <h3>Understanding Progression</h3>
+                <ul>
+                    <li>Normal progression: 10-20% per year</li>
+                    <li>With proper treatment: 0-5% per year</li>
+                    <li>Track every 2-3 years if not zero</li>
+                    <li>Progression rate matters more than absolute number</li>
+                </ul>
+            </section>
+            
+            <section id="advanced-lipids">
+                <h2>Test #2: Advanced Lipid Panel</h2>
+                
+                <div class="test-card">
+                    <h3>Cleveland HeartLab or Similar Advanced Testing</h3>
+                    <p>Standard lipid panels miss the most important markers. You need particle size and inflammatory markers.</p>
+                    
+                    <h4>Critical Markers to Test:</h4>
+                    
+                    <table class="ranges-table">
+                        <thead>
+                            <tr>
+                                <th>Marker</th>
+                                <th>Optimal</th>
+                                <th>Warning</th>
+                                <th>Danger</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Small Dense LDL</strong></td>
+                                <td class="optimal">< 20%</td>
+                                <td class="warning">20-40%</td>
+                                <td class="danger">> 40%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Oxidized LDL</strong></td>
+                                <td class="optimal">< 40 U/L</td>
+                                <td class="warning">40-60</td>
+                                <td class="danger">> 60</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ApoB</strong></td>
+                                <td class="optimal">< 80 mg/dL</td>
+                                <td class="warning">80-100</td>
+                                <td class="danger">> 100</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lp(a)</strong></td>
+                                <td class="optimal">< 30 mg/dL</td>
+                                <td class="warning">30-50</td>
+                                <td class="danger">> 50</td>
+                            </tr>
+                            <tr>
+                                <td><strong>HDL-P (particles)</strong></td>
+                                <td class="optimal">> 30 μmol/L</td>
+                                <td class="warning">25-30</td>
+                                <td class="danger">< 25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Why this matters:</strong> Large fluffy LDL is harmless. Small dense LDL penetrates artery walls and oxidizes, causing plaques.</p>
+                </div>
+            </section>
+            
+            <section id="metabolic">
+                <h2>Test #3: Metabolic/Insulin Panel</h2>
+                
+                <div class="test-card">
+                    <h3>The Tests That Catch Pre-Diabetes 10 Years Early</h3>
+                    
+                    <h4>Essential Metabolic Tests:</h4>
+                    
+                    <table class="ranges-table">
+                        <thead>
+                            <tr>
+                                <th>Test</th>
+                                <th>Optimal</th>
+                                <th>Pre-Disease</th>
+                                <th>Disease</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Fasting Insulin</strong></td>
+                                <td class="optimal">< 5 μIU/mL</td>
+                                <td class="warning">5-10</td>
+                                <td class="danger">> 10</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fasting Glucose</strong></td>
+                                <td class="optimal">< 85 mg/dL</td>
+                                <td class="warning">85-99</td>
+                                <td class="danger">> 100</td>
+                            </tr>
+                            <tr>
+                                <td><strong>HOMA-IR</strong></td>
+                                <td class="optimal">< 1.0</td>
+                                <td class="warning">1.0-2.0</td>
+                                <td class="danger">> 2.0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hemoglobin A1c</strong></td>
+                                <td class="optimal">< 5.3%</td>
+                                <td class="warning">5.3-5.6%</td>
+                                <td class="danger">> 5.7%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Triglyceride/HDL</strong></td>
+                                <td class="optimal">< 1.0</td>
+                                <td class="warning">1.0-2.0</td>
+                                <td class="danger">> 2.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="critical-box">
+                        <strong>The Insulin Test Nobody Runs:</strong>
+                        Glucose tolerance test WITH insulin measurements at 0, 30, 60, 120 minutes. This catches metabolic disease years before diabetes.
+                    </div>
+                </div>
+            </section>
+            
+            <section id="inflammation">
+                <h2>Test #4: Inflammation Panel</h2>
+                
+                <div class="test-card">
+                    <h3>Finding Hidden Sources of Arterial Damage</h3>
+                    
+                    <h4>Key Inflammatory Markers:</h4>
+                    
+                    <table class="ranges-table">
+                        <thead>
+                            <tr>
+                                <th>Marker</th>
+                                <th>Optimal</th>
+                                <th>Moderate Risk</th>
+                                <th>High Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>hs-CRP</strong></td>
+                                <td class="optimal">< 0.5 mg/L</td>
+                                <td class="warning">0.5-1.0</td>
+                                <td class="danger">> 1.0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>IL-6</strong></td>
+                                <td class="optimal">< 2 pg/mL</td>
+                                <td class="warning">2-4</td>
+                                <td class="danger">> 4</td>
+                            </tr>
+                            <tr>
+                                <td><strong>TNF-α</strong></td>
+                                <td class="optimal">< 1.0 pg/mL</td>
+                                <td class="warning">1.0-2.5</td>
+                                <td class="danger">> 2.5</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Homocysteine</strong></td>
+                                <td class="optimal">< 8 μmol/L</td>
+                                <td class="warning">8-10</td>
+                                <td class="danger">> 10</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fibrinogen</strong></td>
+                                <td class="optimal">< 300 mg/dL</td>
+                                <td class="warning">300-400</td>
+                                <td class="danger">> 400</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>What elevation means:</strong> Your body is fighting something – leaky gut, hidden infection, mold exposure, or metabolic dysfunction.</p>
+                </div>
+                
+                <h3>Additional Specialty Tests</h3>
+                <ul>
+                    <li><strong>TMAO:</strong> Gut dysbiosis marker</li>
+                    <li><strong>MPO (Myeloperoxidase):</strong> Vulnerable plaque marker</li>
+                    <li><strong>Lp-PLA2:</strong> Vascular inflammation</li>
+                    <li><strong>Vitamin D:</strong> Should be 50-80 ng/mL</li>
+                    <li><strong>Omega-3 index:</strong> Should be > 8%</li>
+                </ul>
+            </section>
+            
+            <section id="action-plan">
+                <h2>Your Testing Action Plan</h2>
+                
+                <div class="action-box">
+                    <h4>If You're 30-40 Years Old:</h4>
+                    <ol>
+                        <li><strong>Start with:</strong> Coronary calcium score</li>
+                        <li><strong>If CAC = 0:</strong> Get metabolic panel with insulin</li>
+                        <li><strong>If family history:</strong> Add advanced lipids</li>
+                        <li><strong>Retest:</strong> CAC every 5 years if zero</li>
+                    </ol>
+                </div>
+                
+                <div class="action-box">
+                    <h4>If You're 40-50 Years Old:</h4>
+                    <ol>
+                        <li><strong>Get all tests:</strong> Don't wait</li>
+                        <li><strong>CAC score:</strong> Immediately</li>
+                        <li><strong>Full panels:</strong> Metabolic + inflammatory + advanced lipids</li>
+                        <li><strong>Track:</strong> Every 1-2 years</li>
+                    </ol>
+                </div>
+                
+                <div class="action-box">
+                    <h4>If You Have Any Risk Factors:</h4>
+                    <p>(Family history, belly fat, high BP, pre-diabetes)</p>
+                    <ol>
+                        <li><strong>Complete testing NOW</strong></li>
+                        <li><strong>Don't accept "normal"</strong> – demand optimal</li>
+                        <li><strong>Find root causes</strong> of any abnormalities</li>
+                        <li><strong>Retest frequently</strong> to track progress</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <section id="frequency">
+                <h2>Testing Frequency Guidelines</h2>
+                
+                <div class="frequency-box">
+                    <h4>Annual Tests (Everyone)</h4>
+                    <ul>
+                        <li>Fasting insulin</li>
+                        <li>hs-CRP</li>
+                        <li>Vitamin D</li>
+                        <li>Basic metabolic panel</li>
+                        <li>Thyroid panel (TSH, Free T3, Free T4)</li>
+                    </ul>
+                </div>
+                
+                <div class="frequency-box">
+                    <h4>Every 2-3 Years</h4>
+                    <ul>
+                        <li>Advanced lipid panel</li>
+                        <li>Inflammatory markers</li>
+                        <li>Omega-3 index</li>
+                        <li>Micronutrient testing</li>
+                    </ul>
+                </div>
+                
+                <div class="frequency-box">
+                    <h4>CAC Score Frequency</h4>
+                    <ul>
+                        <li><strong>Score = 0:</strong> Every 5 years</li>
+                        <li><strong>Score 1-99:</strong> Every 2-3 years</li>
+                        <li><strong>Score 100+:</strong> Every 2 years</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="interpretation">
+                <h2>Reading Your Results Like a Cardiologist</h2>
+                
+                <h3>Red Flags That Demand Action</h3>
+                <ul>
+                    <li><strong>Any coronary calcium:</strong> You have disease, period</li>
+                    <li><strong>Fasting insulin > 10:</strong> Metabolic disaster brewing</li>
+                    <li><strong>Small dense LDL > 30%:</strong> Arterial damage ongoing</li>
+                    <li><strong>hs-CRP > 1.0:</strong> Find the inflammation source</li>
+                    <li><strong>Multiple "borderline" results:</strong> Pattern = problem</li>
+                </ul>
+                
+                <h3>What Your Doctor Won't Tell You</h3>
+                <ul>
+                    <li>"Normal" ranges are based on sick populations</li>
+                    <li>"Normal" glucose with high insulin = pre-disease</li>
+                    <li>Optimal is dramatically different from "normal"</li>
+                    <li>Trends matter more than single values</li>
+                    <li>Root cause investigation is essential</li>
+                </ul>
+                
+                <div class="critical-box">
+                    <strong>The Bottom Line:</strong>
+                    If your doctor says your "cholesterol is fine" based on a basic panel, find a new doctor. Real cardiovascular prevention requires real testing.
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+        
+        // Highlight active section in TOC
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.toc a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
