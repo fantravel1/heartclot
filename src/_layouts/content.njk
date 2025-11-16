@@ -24,7 +24,7 @@ showScrollToTop: true
 
         {% if publishDate %}
         <div class="article-meta" style="color: #666; margin-bottom: 2rem; font-size: 0.9rem;">
-            <time datetime="{{ publishDate }}">Updated: {{ publishDate | date: "%B %d, %Y" }}</time>
+            <time datetime="{{ publishDate }}">Updated: {{ publishDate }}</time>
             {% if readingTime %}
             <span style="margin-left: 1rem;">{{ readingTime }} min read</span>
             {% endif %}
