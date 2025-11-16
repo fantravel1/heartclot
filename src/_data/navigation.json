@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Insulin",
+    "url": "/insulin-resistance",
+    "description": "Understanding the insulin-heart connection"
+  },
+  {
+    "title": "Fasting",
+    "url": "/fasting-protocols",
+    "description": "Evidence-based fasting protocols"
+  },
+  {
+    "title": "Foods",
+    "url": "/dangerous-foods",
+    "description": "Foods that harm your heart"
+  },
+  {
+    "title": "Gut",
+    "url": "/gut-heart-axis",
+    "description": "The gut-heart connection"
+  },
+  {
+    "title": "Vagus",
+    "url": "/vagus-nerve",
+    "description": "Vagus nerve activation techniques"
+  },
+  {
+    "title": "Exercise",
+    "url": "/exercise-truth",
+    "description": "The truth about exercise and heart health"
+  },
+  {
+    "title": "Testing",
+    "url": "/testing-guide",
+    "description": "Tests that actually matter"
+  },
+  {
+    "title": "Supplements",
+    "url": "/supplement-stack",
+    "description": "Evidence-based supplement protocols"
+  }
+]

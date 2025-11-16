@@ -1,0 +1,20 @@
+{
+  "name": "heartclot",
+  "version": "2.0.0",
+  "description": "Heart disease reversal website - Evidence-based protocols from 35 years of cardiology",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "start": "npm run dev"
+  },
+  "keywords": ["heart-disease", "health", "cardiology"],
+  "author": "Dr. Pradip Jamnadas",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

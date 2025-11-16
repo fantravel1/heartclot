@@ -1,0 +1,16 @@
+{
+  "name": "HeartClot",
+  "title": "HeartClot - Reverse Heart Disease with Metabolic Health",
+  "description": "Evidence-based protocols for heart disease reversal through insulin control, fasting, and metabolic health. Based on 35 years of clinical cardiology.",
+  "url": "https://heartclot.com",
+  "author": {
+    "name": "Dr. Pradip Jamnadas",
+    "title": "MD, FACC - Board Certified Cardiologist",
+    "experience": "35 years",
+    "procedures": "30,000+"
+  },
+  "social": {
+    "ogImage": "https://heartclot.com/images/og-image.jpg"
+  },
+  "currentYear": "2024"
+}

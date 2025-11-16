@@ -1,0 +1,51 @@
+---
+layout: base.njk
+showReadingProgress: true
+showScrollToTop: true
+---
+
+{% block content %}
+<div class="content-layout">
+    {% if tableOfContents %}
+    <aside class="toc" role="navigation" aria-label="Table of contents">
+        <h2>Contents</h2>
+        <ul>
+            {% for item in tableOfContents %}
+            <li>
+                <a href="#{{ item.id }}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </aside>
+    {% endif %}
+
+    <article class="main-content">
+        <h1>{{ title }}</h1>
+
+        {% if publishDate %}
+        <div class="article-meta" style="color: #666; margin-bottom: 2rem; font-size: 0.9rem;">
+            <time datetime="{{ publishDate }}">Updated: {{ publishDate | date: "%B %d, %Y" }}</time>
+            {% if readingTime %}
+            <span style="margin-left: 1rem;">{{ readingTime }} min read</span>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {{ content | safe }}
+
+        {% if relatedTopics %}
+        <section class="related-topics" style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--grey);">
+            <h2>Related Topics</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                {% for topic in relatedTopics %}
+                <a href="{{ topic.url }}" style="padding: 1rem; background: var(--grey); border-radius: 8px; text-decoration: none; color: var(--dark); transition: background 0.3s;">
+                    <strong style="color: var(--blood-red);">{{ topic.title }}</strong>
+                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">{{ topic.description }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+    </article>
+</div>
+{% endblock %}
