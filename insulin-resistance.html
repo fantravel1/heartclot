@@ -46,7 +46,60 @@
         "dateModified": "2024-01-01"
     }
     </script>
-    
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://heartclot.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Insulin Resistance"
+            }
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Why is insulin resistance more dangerous than diabetes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Insulin resistance causes 10+ years of arterial damage before diabetes is diagnosed. High insulin levels damage blood vessels, create visceral fat, and cause inflammation long before blood sugar rises."
+            }
+        },        {
+            "@type": "Question",
+            "name": "What tests should I get to detect insulin resistance early?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Request a fasting insulin test (optimal < 5 μIU/mL), glucose tolerance test with insulin measurements, and HOMA-IR score calculation. Standard diabetes screening misses the decade of damage."
+            }
+        },        {
+            "@type": "Question",
+            "name": "Can insulin resistance be reversed?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Through eliminating frequent eating, implementing time-restricted eating (16:8 fasting), cutting liquid calories and refined carbs, and adding resistance training, insulin sensitivity can be restored."
+            }
+        }
+        ]
+    }
+    </script>
+            
     <style>
         * {
             margin: 0;
@@ -361,6 +414,51 @@
                 box-shadow: 0 5px 20px var(--shadow);
             }
         }
+    
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            background: var(--grey);
+            padding: 1rem 2rem;
+            margin-top: 70px;
+        }
+
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb li {
+            margin: 0;
+        }
+
+        .breadcrumb a {
+            color: var(--deep-red);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb .current {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .breadcrumb {
+                padding: 0.75rem 1rem;
+                margin-top: 60px;
+            }
+
+            .breadcrumb ol {
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -385,6 +483,15 @@
         </nav>
     </header>
     
+    
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li>/</li>
+            <li class="current">Insulin Resistance</li>
+        </ol>
+    </nav>
+
     <div class="layout">
         <aside class="toc">
             <h3>Contents</h3>
