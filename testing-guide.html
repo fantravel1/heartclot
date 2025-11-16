@@ -46,7 +46,60 @@
         "dateModified": "2024-01-01"
     }
     </script>
-    
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://heartclot.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Testing Guide"
+            }
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is the most important test for heart disease risk?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Coronary calcium score (CAC scan) is the single best predictor. A score of zero means very low risk. Any score above zero indicates existing plaque and requires aggressive intervention."
+            }
+        },        {
+            "@type": "Question",
+            "name": "Why doesn't my doctor order these tests?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many doctors rely on standard cholesterol panels which miss the real risks. You may need to specifically request fasting insulin, CAC score, small dense LDL particle testing, and inflammatory markers."
+            }
+        },        {
+            "@type": "Question",
+            "name": "How often should I get tested?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Baseline testing should include CAC score, fasting insulin, and advanced lipids. Retest fasting insulin every 3-6 months when making lifestyle changes. Repeat CAC score every 3-5 years if initial score is low."
+            }
+        }
+        ]
+    }
+    </script>
+            
     <style>
         * {
             margin: 0;
@@ -394,6 +447,51 @@
                 box-shadow: 0 5px 20px var(--shadow);
             }
         }
+    
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            background: var(--grey);
+            padding: 1rem 2rem;
+            margin-top: 70px;
+        }
+
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb li {
+            margin: 0;
+        }
+
+        .breadcrumb a {
+            color: var(--deep-red);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb .current {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .breadcrumb {
+                padding: 0.75rem 1rem;
+                margin-top: 60px;
+            }
+
+            .breadcrumb ol {
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -418,6 +516,15 @@
         </nav>
     </header>
     
+    
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li>/</li>
+            <li class="current">Testing Guide</li>
+        </ol>
+    </nav>
+
     <div class="layout">
         <aside class="toc">
             <h3>Contents</h3>

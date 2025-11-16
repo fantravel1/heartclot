@@ -46,7 +46,60 @@
         "dateModified": "2024-01-01"
     }
     </script>
-    
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://heartclot.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fasting Protocols"
+            }
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How long do I need to fast to see metabolic benefits?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Benefits begin at 12 hours when insulin drops and fat burning increases. At 16-18 hours, autophagy activates. Most people benefit from daily 16:8 time-restricted eating (16 hours fasting, 8 hour eating window)."
+            }
+        },        {
+            "@type": "Question",
+            "name": "Is fasting safe for everyone?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fasting is not recommended for pregnant/nursing women, children, those with eating disorders, or people on certain medications. Always consult your healthcare provider before starting any fasting protocol."
+            }
+        },        {
+            "@type": "Question",
+            "name": "What can I drink during a fast?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Water, black coffee, and plain tea are allowed during fasting. Avoid any calories including cream, sugar, artificial sweeteners, or juice which will break the fast and spike insulin."
+            }
+        }
+        ]
+    }
+    </script>
+            
     <style>
         * {
             margin: 0;
@@ -384,6 +437,51 @@
                 box-shadow: 0 5px 20px var(--shadow);
             }
         }
+    
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            background: var(--grey);
+            padding: 1rem 2rem;
+            margin-top: 70px;
+        }
+
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb li {
+            margin: 0;
+        }
+
+        .breadcrumb a {
+            color: var(--deep-red);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb .current {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .breadcrumb {
+                padding: 0.75rem 1rem;
+                margin-top: 60px;
+            }
+
+            .breadcrumb ol {
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -408,6 +506,15 @@
         </nav>
     </header>
     
+    
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li>/</li>
+            <li class="current">Fasting Protocols</li>
+        </ol>
+    </nav>
+
     <div class="layout">
         <aside class="toc">
             <h3>Contents</h3>

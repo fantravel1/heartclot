@@ -44,7 +44,28 @@
         }
     }
     </script>
-    
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://heartclot.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Quick Start Guide"
+            }
+        ]
+    }
+    </script>
+        
     <style>
         * {
             margin: 0;
@@ -406,6 +427,51 @@
                 margin: 0 auto;
             }
         }
+    
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            background: var(--grey);
+            padding: 1rem 2rem;
+            margin-top: 70px;
+        }
+
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb li {
+            margin: 0;
+        }
+
+        .breadcrumb a {
+            color: var(--deep-red);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb .current {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .breadcrumb {
+                padding: 0.75rem 1rem;
+                margin-top: 60px;
+            }
+
+            .breadcrumb ol {
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -430,6 +496,15 @@
         </nav>
     </header>
     
+    
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li>/</li>
+            <li class="current">Quick Start Guide</li>
+        </ol>
+    </nav>
+
     <section class="hero-section">
         <h1>Start Reversing Heart Disease Today</h1>
         <p>Simple actions you can take right now, based on 35 years of clinical experience and 30,000+ successful cases</p>
