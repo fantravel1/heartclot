@@ -1,14 +1,21 @@
 ---
 layout: base.njk
-title: HeartClot - Reverse Heart Disease with Metabolic Health
-description: Heart disease kills more than all cancers combined. Learn the hidden insulin-heart connection and evidence-based reversal protocols from 35 years of clinical cardiology.
+title: HeartClot - Heart Disease, Heart Attacks & Blood Clots Prevention
+description: Heart disease kills more than all cancers combined. Learn how blood clots cause heart attacks, heart disease in men and women, health disparities in communities of color, and evidence-based prevention from 35 years of cardiology.
 ogType: website
 schema:
   "@context": "https://schema.org"
   "@type": "MedicalWebPage"
-  "name": "HeartClot - Heart Disease Reversal"
-  "description": "Evidence-based protocols for preventing and reversing cardiovascular disease"
+  "name": "HeartClot - Heart Disease, Heart Attacks & Blood Clots Prevention"
+  "description": "Evidence-based protocols for preventing heart attacks and blood clots. Comprehensive guides for men, women, and communities of color."
   "url": "https://heartclot.com"
+  "about":
+    - "@type": "MedicalCondition"
+      "name": "Heart Disease"
+    - "@type": "MedicalCondition"
+      "name": "Myocardial Infarction"
+    - "@type": "MedicalCondition"
+      "name": "Thrombosis"
 ---
 
 {% block content %}
@@ -181,6 +188,90 @@ schema:
         </div>
     </section>
 </div>
+
+<section id="blood-clots-section" aria-label="Blood Clots and Heart Disease">
+    <div class="container">
+        <h2>Understanding Blood Clots & Heart Attacks</h2>
+        <p>A heart attack happens in minutes - when a blood clot suddenly blocks a coronary artery. Understanding clots is understanding heart attacks.</p>
+
+        <a href="/blood-clots" class="topic-card featured-card" aria-label="Learn about blood clots">
+            <div class="topic-header">
+                <div class="topic-icon" aria-hidden="true">🩸</div>
+                <h3 class="topic-title">Blood Clots: The Immediate Cause</h3>
+            </div>
+            <div class="topic-content">
+                <p class="topic-description">How clots form, why metabolic dysfunction creates a pro-thrombotic state, and evidence-based prevention</p>
+                <ul class="topic-highlights">
+                    <li>The clotting cascade explained</li>
+                    <li>Insulin resistance → clotting risk</li>
+                    <li>Natural blood thinning strategies</li>
+                    <li>Warning signs you must know</li>
+                </ul>
+                <span class="read-more">Deep dive into blood clots</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section id="population-specific" aria-label="Heart Disease by Population">
+    <div class="container">
+        <h2>Heart Disease Affects Everyone Differently</h2>
+        <p>Research shows heart disease presents differently based on sex and ethnicity. Get information specific to you.</p>
+
+        <div class="topics-grid">
+            <a href="/heart-attacks-men" class="topic-card" aria-label="Heart attacks in men">
+                <div class="topic-header">
+                    <div class="topic-icon" aria-hidden="true">♂️</div>
+                    <h3 class="topic-title">Heart Disease in Men</h3>
+                </div>
+                <div class="topic-content">
+                    <p class="topic-description">Men are 2x more likely to have heart attacks - and have them earlier</p>
+                    <ul class="topic-highlights">
+                        <li>Male-specific risk factors</li>
+                        <li>Testosterone and heart health</li>
+                        <li>Warning signs men ignore</li>
+                        <li>Prevention protocols for men</li>
+                    </ul>
+                    <span class="read-more">Men's heart health guide</span>
+                </div>
+            </a>
+
+            <a href="/womens-heart-health" class="topic-card" aria-label="Women's heart health">
+                <div class="topic-header">
+                    <div class="topic-icon" aria-hidden="true">♀️</div>
+                    <h3 class="topic-title">Heart Disease in Women</h3>
+                </div>
+                <div class="topic-content">
+                    <p class="topic-description">Heart disease kills more women than all cancers combined - yet it's underdiagnosed</p>
+                    <ul class="topic-highlights">
+                        <li>Different symptoms in women</li>
+                        <li>Menopause and heart risk</li>
+                        <li>Pregnancy as a stress test</li>
+                        <li>Why women are misdiagnosed</li>
+                    </ul>
+                    <span class="read-more">Women's heart health guide</span>
+                </div>
+            </a>
+
+            <a href="/heart-health-disparities" class="topic-card" aria-label="Heart health in communities of color">
+                <div class="topic-header">
+                    <div class="topic-icon" aria-hidden="true">🌍</div>
+                    <h3 class="topic-title">Health Disparities & Communities of Color</h3>
+                </div>
+                <div class="topic-content">
+                    <p class="topic-description">Black Americans are 30% more likely to die from heart disease. South Asians have 2-4x higher risk.</p>
+                    <ul class="topic-highlights">
+                        <li>Landmark research studies</li>
+                        <li>Population-specific risk factors</li>
+                        <li>Culturally-informed prevention</li>
+                        <li>Advocacy and self-care</li>
+                    </ul>
+                    <span class="read-more">Health equity resources</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
 
 <section class="cta-section">
     <h2>Ready to Take Control?</h2>
