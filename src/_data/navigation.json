@@ -15,24 +15,39 @@
     "description": "Foods that harm your heart"
   },
   {
-    "title": "Gut",
-    "url": "/gut-heart-axis",
-    "description": "The gut-heart connection"
+    "title": "Blood Clots",
+    "url": "/blood-clots",
+    "description": "How clots cause heart attacks"
   },
   {
-    "title": "Vagus",
-    "url": "/vagus-nerve",
-    "description": "Vagus nerve activation techniques"
+    "title": "Men",
+    "url": "/heart-attacks-men",
+    "description": "Heart disease in men"
   },
   {
-    "title": "Exercise",
-    "url": "/exercise-truth",
-    "description": "The truth about exercise and heart health"
+    "title": "Women",
+    "url": "/womens-heart-health",
+    "description": "Heart disease in women"
+  },
+  {
+    "title": "Disparities",
+    "url": "/heart-health-disparities",
+    "description": "Health equity and communities of color"
   },
   {
     "title": "Testing",
     "url": "/testing-guide",
     "description": "Tests that actually matter"
+  },
+  {
+    "title": "Gut",
+    "url": "/gut-heart-axis",
+    "description": "The gut-heart connection"
+  },
+  {
+    "title": "Exercise",
+    "url": "/exercise-truth",
+    "description": "The truth about exercise and heart health"
   },
   {
     "title": "Supplements",
