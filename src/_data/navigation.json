@@ -53,5 +53,10 @@
     "title": "Supplements",
     "url": "/supplement-stack",
     "description": "Evidence-based supplement protocols"
+  },
+  {
+    "title": "Experts",
+    "url": "/experts-thought-leaders",
+    "description": "Thought leaders and diverse perspectives"
   }
 ]
