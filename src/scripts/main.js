@@ -64,7 +64,28 @@
         menuToggle.setAttribute('aria-expanded', isActive);
 
         // Prevent body scroll when menu is open
-        document.body.style.overflow = isActive ? 'hidden' : '';
+        if (isActive) {
+            document.body.classList.add('menu-open');
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+        }
+    }
+
+    /**
+     * Close mobile menu (for use in event handlers)
+     */
+    function closeMenu() {
+        const navMenu = document.getElementById('navMenu');
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+
+        if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+        }
     }
 
     // ============================================
@@ -160,10 +181,7 @@
                 e.preventDefault();
 
                 // Close mobile menu if open
-                const navMenu = document.getElementById('navMenu');
-                if (navMenu && navMenu.classList.contains('active')) {
-                    toggleMenu();
-                }
+                closeMenu();
 
                 // Scroll to target
                 target.scrollIntoView({
@@ -247,10 +265,7 @@
      */
     function handleEscapeKey(e) {
         if (e.key === 'Escape') {
-            const navMenu = document.getElementById('navMenu');
-            if (navMenu && navMenu.classList.contains('active')) {
-                toggleMenu();
-            }
+            closeMenu();
         }
     }
 
@@ -301,14 +316,16 @@
         // Keyboard navigation
         document.addEventListener('keydown', handleEscapeKey);
 
-        // Close menu when clicking outside
+        // Close menu when clicking outside or on a nav link
         document.addEventListener('click', function(e) {
             const navMenu = document.getElementById('navMenu');
             const menuToggle = document.querySelector('.mobile-menu-toggle');
 
             if (navMenu && navMenu.classList.contains('active')) {
-                if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                    toggleMenu();
+                // Close if clicking outside the menu or on a nav link
+                const clickedNavLink = e.target.closest('.nav-links a');
+                if (clickedNavLink || (!navMenu.contains(e.target) && !menuToggle.contains(e.target))) {
+                    closeMenu();
                 }
             }
         });
@@ -321,7 +338,9 @@
         init();
     }
 
-    // Make toggleMenu available globally for backwards compatibility
+    // Make functions available globally for backwards compatibility
     window.toggleMenu = toggleMenu;
+    window.closeMenu = closeMenu;
+    window.scrollToTop = scrollToTop;
 
 })();
