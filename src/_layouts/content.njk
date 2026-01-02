@@ -4,7 +4,15 @@ showReadingProgress: true
 showScrollToTop: true
 ---
 
-{% block content %}
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb" aria-label="Breadcrumb" style="max-width: var(--max-width); margin: calc(var(--header-height) + 1rem) auto 0; padding: 0 2rem;">
+    <ol style="display: flex; list-style: none; gap: 0.5rem; font-size: 0.9rem; color: #666;">
+        <li><a href="/" style="color: var(--deep-red); text-decoration: none;">Home</a></li>
+        <li style="color: #999;">/</li>
+        <li aria-current="page">{{ title | truncate(50) }}</li>
+    </ol>
+</nav>
+
 <div class="content-layout">
     {% if tableOfContents %}
     <aside class="toc" role="navigation" aria-label="Table of contents">
@@ -48,4 +56,3 @@ showScrollToTop: true
         {% endif %}
     </article>
 </div>
-{% endblock %}
